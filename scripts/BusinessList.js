@@ -2,7 +2,6 @@ import { useBusinesses, businessesInNY, businessesInManufacturing } from "./Busi
 import { Business } from "./Business.js"
 
 const contentTarget = document.querySelector(".businesses")
-
 export const BusinessList = () => {
     const businessArray = useBusinesses()
     contentTarget.innerHTML = "<h1>Active Business</h1>"
@@ -15,8 +14,6 @@ export const BusinessList = () => {
 }
 
 const companyTarget = document.querySelector(".businessList--newYork")
-
-
 export const CompanyInNYList = () => {
     const businessinNYArray = businessesInNY
     contentTarget.innerHTML = "<h1>New York Businesses</h1>"
@@ -29,8 +26,6 @@ export const CompanyInNYList = () => {
 }
 
 const manufactureTarget = document.querySelector(".businessList--manufacturing")
-
-
 export const CompanyIndustry = () => {
     const businessInManufacturingArray = businessesInManufacturing
     contentTarget.innerHTML = "<h1>Manufacturing Businesses</h1>"
