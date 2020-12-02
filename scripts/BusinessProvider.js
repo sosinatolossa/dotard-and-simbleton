@@ -128,3 +128,7 @@ const businesses = [
     }
     return false
   })
+
+  export const theAgent = businesses.map(company => {
+    return company
+  })
