@@ -1,8 +1,7 @@
 
-import {BusinessList, CompanyInNYList, CompanyIndustry, agentList} from "./BusinessList.js"
+import {BusinessList, CompanyInNYList, CompanyIndustry} from "./BusinessList.js"
 
-//BusinessList()
+BusinessList()
 // CompanyInNYList()
 // CompanyIndustry()
-
-agentList()
+//searchList()

@@ -132,3 +132,7 @@ const businesses = [
   export const theAgent = businesses.map(company => {
     return company
   })
+
+  export const findCompany = (companySearch) => {
+    return businesses.find(businesses.companyName === companySearch)
+  }
