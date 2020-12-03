@@ -133,6 +133,6 @@ const businesses = [
     return company
   })
 
-  export const findCompany = (companySearch) => {
-    return businesses.find(businesses.companyName === companySearch)
-  }
+  // export const findCompany = (companySearch) => {
+  //   return businesses.find(businesses.companyName === companySearch)
+  // }
