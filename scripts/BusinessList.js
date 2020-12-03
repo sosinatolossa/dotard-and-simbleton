@@ -1,5 +1,5 @@
-import { useBusinesses, businessesInNY, businessesInManufacturing, theAgent } from "./BusinessProvider.js"
-import { PurchasingAgent } from "./Business.js"
+import { useBusinesses, businessesInNY, businessesInManufacturing, theAgent, findCompany } from "./BusinessProvider.js"
+import { Business } from "./Business.js"
 
 const contentTarget = document.querySelector(".businesses")
 export const BusinessList = () => {
@@ -39,7 +39,7 @@ export const CompanyIndustry = () => {
 
 const agentTarget = document.querySelector(".agents")
 export const agentList = () => {
-    const agentsArray = theAgent
+    const agentsArray = theAgent()
     contentTarget.innerHTML = "<h1>Purchasing Agents</h1>"
 
     agentsArray.forEach(
@@ -48,3 +48,14 @@ export const agentList = () => {
         }
     );   
 }
+
+// const searchTarget = document.querySelector(".serchEngine")
+// export const searchList = () => {
+//     const searchesArray = findCompany
+
+//     // searchesArray.forEach(
+//     //     (company) => {
+//     //         searchTarget.innerHTML += Business(company)
+//     //     }
+//     // );   
+// }
