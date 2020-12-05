@@ -112,12 +112,12 @@ const businesses = [
   ];
 
   export const useBusinesses = () => {
-      return businesses.slice()
+      return businesses.slice() //return a copy of businesses array
   }
 
-  export const businessesInNY = businesses.filter(company => {
-    if (company.addressStateCode === "NY") {
-      return true
+  export const businessesInNY = businesses.filter(company => { 
+    if (company.addressStateCode === "NY") { //here company is a function. We're using it to test a condition
+      return true //any value that satifies the consition will be added into a new array and we assigned that array to a variable businessInNY
     }
     return false
   })
@@ -129,7 +129,7 @@ const businesses = [
     return false
   })
 
-  export const theAgent = businesses.map(company => {
+  export const theAgent = businesses.map(company => { //.map returns company(our single object in businesses) and stores it in a new array and in order to get that array we must assign it into a varaible
     return company
   })
 

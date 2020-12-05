@@ -4,23 +4,23 @@ import { Business } from "./Business.js"
 const contentTarget = document.querySelector(".businesses")
 export const BusinessList = () => {
     const businessArray = useBusinesses()
-    contentTarget.innerHTML = "<h1>Active Business</h1>"
+    contentTarget.innerHTML = "<h1>Active Business</h1>" //inserts the h1 into the DOM
 
-    businessArray.forEach(
-        (company) => {
-            contentTarget.innerHTML += Business(company)
+    businessArray.forEach( //We're calling each object of businessArray once and forEach is letting us do that
+        (company) => { //company is a value, in this case it's an object
+            contentTarget.innerHTML += Business(company) //we're adding each object that we wrote our javascript code in HTML form from Business.js in HTML
         }
     );   
 }
 
 const companyTarget = document.querySelector(".businessList--newYork")
 export const CompanyInNYList = () => {
-    const businessinNYArray = businessesInNY()
+    const businessinNYArray = businessesInNY() //assigning our filtering function from BusinessProvider.js to a variable businessinNYArray
     contentTarget.innerHTML = "<h1>New York Businesses</h1>"
 
-    businessinNYArray.forEach(
+    businessinNYArray.forEach( //for each filtered object in businessinNYArray,
         (company) => {
-            companyTarget.innerHTML += Business(company)
+            companyTarget.innerHTML += Business(company) //put them in HTML
         }
     );   
 }
@@ -39,13 +39,13 @@ export const CompanyIndustry = () => {
 
 const agentTarget = document.querySelector(".agents")
 export const agentList = () => {
-    const agentsArray = theAgent()
+    const agentsArray = theAgent() //assigning our function from BusinessProvider.js to a new variable agentsArray
     contentTarget.innerHTML = "<h1>Purchasing Agents</h1>"
 
-    agentsArray.forEach(
-        (company) => {
-            agentTarget.innerHTML += PurchasingAgent(company)
-        }
+    agentsArray.forEach( //we're evaluting each object in businesses
+        (company) => { //company is a single object in businesses
+            agentTarget.innerHTML += PurchasingAgent(company) //PurchasingAagent function is from Business.js
+        } //it focuses on only purchasing agents property (which itself is an object) that is in company (single businesses object)
     );   
 }
 
